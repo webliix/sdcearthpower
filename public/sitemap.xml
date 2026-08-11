@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================
+     sitemap.xml — SDC Power (sdcearthpower.com)
+     Place this file at: public/sitemap.xml
+     Submit to: Google Search Console + Bing Webmaster Tools
+     URL: https://sdcearthpower.com/sitemap.xml
+============================================================ -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ── CORE PAGES ───────────────────────────────── -->
+
+  <url>
+    <loc>https://sdcearthpower.com/</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sdcearthpower.com/images/og/sdc-power-logo.jpeg</image:loc>
+      <image:title>SDC Power – ESE Lightning Arrester and Earthing Electrode Manufacturer India</image:title>
+      <image:caption>CPRI-certified ESE lightning arrester manufacturer in Dadri, Uttar Pradesh – SDC Power</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://sdcearthpower.com/images/products/ese-sdc60.jpg</image:loc>
+      <image:title>ESE Lightning Arrester SDC-60 – 250 kA, 107m Protection, CPRI Certified</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/about</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/why-us</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/industries</loc>
+    <lastmod>2025-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/certifications</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/contact</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/network</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/gallery</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- ── CATEGORY FILTER PAGES ────────────────────── -->
+
+  <url>
+    <loc>https://sdcearthpower.com/products?cat=lightning-arresters</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products?cat=earthing-electrodes</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products?cat=earth-rods</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products?cat=earthing-equipment</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products?cat=earthing-plates</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products?cat=distribution-boxes</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products?cat=accessories</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <!-- ── PRODUCT DETAIL PAGES ─────────────────────── -->
+
+  <url>
+    <loc>https://sdcearthpower.com/products/ese-lightning-arrester-sdc-60</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+    <image:image>
+      <image:loc>https://sdcearthpower.com/images/products/ese-sdc60.jpg</image:loc>
+      <image:title>ESE Lightning Arrester SDC-60 – 250 kA, 60µs, SS304, CPRI Certified, 107m Radius</image:title>
+      <image:caption>SDC Power ESE Lightning Arrester SDC-60 – IEC 62305 compliant, CPRI tested at 45 kA, 107m Level 4 protection radius</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/ese-lightning-arrester-standard</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://sdcearthpower.com/images/products/ese-arrester.jpg</image:loc>
+      <image:title>ESE Lightning Arrester Standard – 140mm Wide, 2.6 kg, 107m Protection, IS 2309</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/copper-bonded-conventional-arrester</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/pure-copper-lightning-arrester</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/gi-earth-electrode</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://sdcearthpower.com/images/products/gi-electrode.jpg</image:loc>
+      <image:title>GI Earth Electrode 50mm – Hot-Dip Galvanized, IS 3043, 1m to 6m Lengths</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/pure-copper-earth-electrode</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.87</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/copper-bonded-earth-electrode</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://sdcearthpower.com/images/products/copper-bonded-electrode.jpg</image:loc>
+      <image:title>Copper Bonded Earth Electrode 50mm – 250µm Electrolytic Coating, IS 3043 IEC 62305</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/gi-earth-rod</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/copper-bonded-earth-rod</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://sdcearthpower.com/images/products/copper-bonded-rods.jpg</image:loc>
+      <image:title>Copper Bonded Earth Rod – 250µm Cu Bond, 14.2mm 17.2mm, 30+ Year Life</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/pure-copper-earth-rod</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/earthing-pit-cover</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/gi-earthing-strip</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/copper-bonded-earthing-strip</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/pure-copper-earthing-strip</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/gi-busbar</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/copper-bonded-busbar</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/pure-copper-busbar</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/bare-copper-wire</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.68</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/earth-enhancing-compound</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/gi-earthing-plate</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/copper-bonded-earthing-plate</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/pure-copper-earthing-plate</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/ac-distribution-box</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/dc-distribution-box</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/lightning-strike-counter</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+    <image:image>
+      <image:loc>https://sdcearthpower.com/images/products/strike-counter.jpg</image:loc>
+      <image:title>Lightning Strike Counter IP65 – 1 kA to 100 kA, 9,999,999 Events, IS 2309-1989</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sdcearthpower.com/products/surge-protection-device</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+
+</urlset>

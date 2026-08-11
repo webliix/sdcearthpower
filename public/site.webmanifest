@@ -1,0 +1,24 @@
+{
+  "name": "SDC Earth Power – Lightning Arrester & Earthing Manufacturer",
+  "short_name": "SDC Earth Power",
+  "description": "CPRI-certified ESE lightning arrester and copper earthing electrode manufacturer in India",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d2d7a",
+  "theme_color": "#1a4fcc",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/sdc-power-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/sdc-power-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}

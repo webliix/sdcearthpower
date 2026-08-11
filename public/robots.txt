@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+ 
+# Block crawlers from non-content paths
+Disallow: /api/
+Disallow: /.env
+Disallow: /node_modules/
+ 
+# Allow all major search engine crawlers explicitly
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+ 
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+ 
+User-agent: Slurp
+Allow: /
+ 
+User-agent: DuckDuckBot
+Allow: /
+ 
+# Sitemap location
+Sitemap: https://sdcearthpower.com/sitemap.xml
