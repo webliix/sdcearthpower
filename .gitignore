@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# Production build output
+dist/
+
+# Unwanted / Temporary folders and files
+{public/
+New Text Document.txt
+*.log
+.DS_Store

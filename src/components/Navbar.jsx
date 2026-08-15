@@ -223,7 +223,17 @@ export default function Navbar({ scrollY }) {
                   {link.label} ›
                 </Link>
               ))}
-              <div style={{ padding: 20 }}>
+              <div style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <button
+                  onClick={() => {
+                    setOpen(false)
+                    window.dispatchEvent(new CustomEvent('open-appointment'))
+                  }}
+                  className="btn-primary"
+                  style={{ width: '100%', justifyContent: 'center', fontSize: '0.88rem', background: 'linear-gradient(135deg, var(--blue), var(--blue-dk))' }}
+                >
+                  📅 Book Appointment
+                </button>
                 <a href="tel:+919321447203" className="btn-primary" style={{ width: '100%', justifyContent: 'center', fontSize: '0.88rem' }}>
                   📞 +91 9321447203
                 </a>

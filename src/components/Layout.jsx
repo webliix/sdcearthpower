@@ -4,14 +4,42 @@ import Topbar from './Topbar.jsx'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
 import SupplyNetwork from './SupplyNetwork.jsx'
+import AppointmentModal from './AppointmentModal.jsx'
 
 export default function Layout() {
   const [scrollY, setScrollY] = useState(0)
+  const [isAppointmentOpen, setIsAppointmentOpen] = useState(false)
+
   useEffect(() => {
     const fn = () => setScrollY(window.scrollY)
     window.addEventListener('scroll', fn, { passive: true })
-    return () => window.removeEventListener('scroll', fn)
+
+    const handleCustomOpen = () => setIsAppointmentOpen(true)
+    window.addEventListener('open-appointment', handleCustomOpen)
+
+    // First-time visit auto popup per session
+    const seen = sessionStorage.getItem('sdc_appointment_seen')
+    if (!seen) {
+      const timer = setTimeout(() => {
+        setIsAppointmentOpen(true)
+      }, 900)
+      return () => {
+        clearTimeout(timer)
+        window.removeEventListener('scroll', fn)
+        window.removeEventListener('open-appointment', handleCustomOpen)
+      }
+    }
+
+    return () => {
+      window.removeEventListener('scroll', fn)
+      window.removeEventListener('open-appointment', handleCustomOpen)
+    }
   }, [])
+
+  const handleCloseAppointment = () => {
+    setIsAppointmentOpen(false)
+    sessionStorage.setItem('sdc_appointment_seen', 'true')
+  }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', position: 'relative' }}>
@@ -23,13 +51,16 @@ export default function Layout() {
       <SupplyNetwork />
       <Footer />
 
+      {/* APPOINTMENT MODAL */}
+      <AppointmentModal isOpen={isAppointmentOpen} onClose={handleCloseAppointment} />
+
       {/* FLOATING QUICK ACTIONS FOR ALL DEVICES */}
       <style>{`
         @keyframes pulseWa {
           0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,.6), 0 6px 24px rgba(37,211,102,.4); }
           50% { box-shadow: 0 0 0 14px rgba(37,211,102,0), 0 8px 28px rgba(37,211,102,.5); }
         }
-        .floating-action-btn { position: relative; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid #fff; text-decoration: none; transition: transform .3s cubic-bezier(.34,1.56,.64,1); }
+        .floating-action-btn { position: relative; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid #fff; text-decoration: none; transition: transform .3s cubic-bezier(.34,1.56,.64,1); cursor: pointer; }
         .floating-action-btn:hover { transform: scale(1.14); }
         .floating-tooltip { position: absolute; right: 60px; background: #080f24; color: #fff; font-family: var(--ffh); font-size: 0.72rem; font-weight: 700; padding: 5px 12px; border-radius: 4px; white-space: nowrap; pointer-events: none; opacity: 0; transform: translateX(8px); transition: all .25s; letter-spacing: .04em; boxShadow: 0 4px 14px rgba(0,0,0,.2); }
         .floating-action-btn:hover .floating-tooltip { opacity: 1; transform: translateX(0); }
@@ -44,6 +75,25 @@ export default function Layout() {
         gap: 12,
         alignItems: 'flex-end'
       }}>
+        {/* Book Appointment Action */}
+        <button
+          onClick={() => setIsAppointmentOpen(true)}
+          aria-label="Book Appointment"
+          className="floating-action-btn"
+          style={{
+            width: 46,
+            height: 46,
+            background: 'linear-gradient(135deg, var(--orange), var(--orange-dk))',
+            color: '#fff',
+            boxShadow: '0 4px 18px rgba(240,112,32,.4)',
+            fontSize: '1.2rem',
+            border: '2px solid #fff'
+          }}
+        >
+          <span className="floating-tooltip">📅 Book Appointment</span>
+          📅
+        </button>
+
         {/* Call Quick Action */}
         <a
           href="tel:+919321447203"

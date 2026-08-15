@@ -13,6 +13,29 @@ export default function Topbar() {
           </a>
         </div>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent('open-appointment'))}
+            style={{
+              fontSize: '0.72rem',
+              color: '#ffffff',
+              background: 'rgba(0,0,0,.2)',
+              padding: '2px 10px',
+              border: '1px solid rgba(255,255,255,.4)',
+              borderRadius: 3,
+              cursor: 'pointer',
+              fontWeight: 700,
+              fontFamily: 'var(--ffh)',
+              letterSpacing: '.04em',
+              transition: 'all .2s',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 4
+            }}
+            onMouseEnter={e => e.currentTarget.style.background = 'rgba(0,0,0,.4)'}
+            onMouseLeave={e => e.currentTarget.style.background = 'rgba(0,0,0,.2)'}
+          >
+            📅 Book Appointment
+          </button>
           {['Media', 'Videos', 'Gallery'].map(l => (
             <Link key={l} to="/gallery" style={{
               fontSize: '0.72rem', color: 'rgba(255,255,255,.85)',
