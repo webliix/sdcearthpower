@@ -84,12 +84,14 @@ export default function AppointmentModal({ isOpen, onClose }) {
 
   const inputStyle = (field) => ({
     width: '100%',
+    maxWidth: '100%',
+    minWidth: 0,
     background: focused === field ? '#ffffff' : '#f8fafc',
     border: `1.5px solid ${errors[field] ? '#dc2626' : focused === field ? 'var(--orange)' : 'var(--bdr)'}`,
     borderRadius: 6,
-    padding: '11px 14px',
+    padding: '11px 12px',
     fontFamily: 'var(--ff)',
-    fontSize: '0.86rem',
+    fontSize: '0.84rem',
     color: 'var(--dark)',
     outline: 'none',
     boxSizing: 'border-box',
@@ -98,29 +100,41 @@ export default function AppointmentModal({ isOpen, onClose }) {
   })
 
   return (
-    <div style={{
+    <div className="appt-modal-backdrop" style={{
       position: 'fixed',
       inset: 0,
       zIndex: 10000,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: 16,
+      padding: '12px',
       background: 'rgba(8, 15, 36, 0.72)',
       backdropFilter: 'blur(8px)',
-      animation: 'fadeIn .3s ease'
+      animation: 'fadeIn .3s ease',
+      boxSizing: 'border-box'
     }}>
+      {/* Responsive Style Overrides */}
+      <style>{`
+        .appt-modal-card { width: 100%; max-width: 500px; box-sizing: border-box; }
+        .appt-pill-btn { flex: 1 1 auto; min-width: 0; text-align: center; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+        @media (max-width: 480px) {
+          .appt-modal-card { max-height: 94vh !important; border-radius: 8px !important; }
+          .appt-header-padding { padding: 10px 14px !important; }
+          .appt-body-padding { padding: 14px 14px !important; }
+          .appt-pill-group { gap: 4px !important; }
+          .appt-pill-btn { font-size: 0.68rem !important; padding: 5px 6px !important; }
+        }
+      `}</style>
+
       {/* Backdrop Click */}
       <div style={{ position: 'absolute', inset: 0 }} onClick={onClose} />
 
       {/* Modal Container */}
-      <div style={{
+      <div className="appt-modal-card" style={{
         position: 'relative',
         zIndex: 10001,
-        width: '100%',
-        maxWidth: 540,
         background: '#ffffff',
-        borderRadius: 12,
+        borderRadius: 10,
         overflow: 'hidden',
         boxShadow: '0 25px 70px rgba(0,0,0,.35)',
         border: '1px solid rgba(255,255,255,.3)',
@@ -128,10 +142,10 @@ export default function AppointmentModal({ isOpen, onClose }) {
         display: 'flex',
         flexDirection: 'column'
       }}>
-        {/* Header with Brand Logo */}
-        <div style={{
-          background: 'linear-gradient(135deg, var(--blue-dk), var(--blue))',
-          padding: '20px 24px',
+        {/* Header with Brand Colors (Sleek Thin Layout) */}
+        <div className="appt-header-padding" style={{
+          background: 'linear-gradient(135deg, var(--blue-dk) 0%, var(--blue) 100%)',
+          padding: '12px 18px',
           color: '#ffffff',
           position: 'relative',
           borderBottom: '3px solid var(--orange)'
@@ -142,15 +156,15 @@ export default function AppointmentModal({ isOpen, onClose }) {
             aria-label="Close modal"
             style={{
               position: 'absolute',
-              right: 16,
-              top: 16,
-              width: 34,
-              height: 34,
+              right: 12,
+              top: 12,
+              width: 28,
+              height: 28,
               borderRadius: '50%',
               background: 'rgba(255,255,255,.15)',
               border: 'none',
               color: '#ffffff',
-              fontSize: '1.1rem',
+              fontSize: '1rem',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
@@ -164,35 +178,35 @@ export default function AppointmentModal({ isOpen, onClose }) {
           </button>
 
           {/* Logo & Brand Header */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <div style={{
-              width: 52,
-              height: 52,
+              width: 38,
+              height: 38,
               borderRadius: '50%',
               background: '#ffffff',
-              border: '2.5px solid var(--orange)',
+              border: '2px solid var(--orange)',
               overflow: 'hidden',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               flexShrink: 0,
-              boxShadow: '0 4px 14px rgba(0,0,0,.2)'
+              boxShadow: '0 3px 10px rgba(0,0,0,.2)'
             }}>
               <img
                 src="/images/sdc-power-logo.png"
                 alt="SDC Earth Power"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                onError={e => { e.target.style.display = 'none'; e.target.parentNode.textContent = '⚡'; e.target.parentNode.style.cssText += 'color:var(--blue);font-size:1.5rem;font-weight:900;display:flex;align-items:center;justify-content:center' }}
+                onError={e => { e.target.style.display = 'none'; e.target.parentNode.textContent = '⚡'; e.target.parentNode.style.cssText += 'color:var(--blue);font-size:1.2rem;font-weight:900;display:flex;align-items:center;justify-content:center' }}
               />
             </div>
             <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'rgba(240,112,32,.25)', padding: '3px 10px', borderRadius: 20, fontSize: '0.64rem', fontWeight: 800, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--yellow)', marginBottom: 4 }}>
-                ⚡ SDC EARTH POWER — OFFICIAL
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: 'rgba(240,112,32,.25)', padding: '2px 8px', borderRadius: 20, fontSize: '0.6rem', fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--yellow)', marginBottom: 2 }}>
+                ⚡ SDC EARTH POWER
               </div>
-              <h2 style={{ fontFamily: 'var(--ffh)', fontSize: '1.4rem', fontWeight: 800, margin: 0, color: '#ffffff', letterSpacing: '.02em' }}>
+              <h2 style={{ fontFamily: 'var(--ffh)', fontSize: 'clamp(1.05rem, 3.5vw, 1.2rem)', fontWeight: 800, margin: 0, color: '#ffffff', letterSpacing: '.02em', lineHeight: 1.2 }}>
                 Book Consultation &amp; Appointment
               </h2>
-              <p style={{ fontSize: '0.76rem', color: 'rgba(255,255,255,.85)', margin: '2px 0 0', lineHeight: 1.4 }}>
+              <p style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,.85)', margin: '1px 0 0', lineHeight: 1.3 }}>
                 Fast 24-hour response &amp; expert site consultation.
               </p>
             </div>
@@ -200,7 +214,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
         </div>
 
         {/* Scrollable Form Body */}
-        <div style={{ padding: '22px 26px', overflowY: 'auto', flex: 1 }}>
+        <div className="appt-body-padding" style={{ padding: '22px 24px', overflowY: 'auto', flex: 1, overflowX: 'hidden' }}>
           <form onSubmit={handleSendWhatsApp}>
             {/* Full Name */}
             <div style={{ marginBottom: 14 }}>
@@ -220,7 +234,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
             </div>
 
             {/* Mobile & Email Grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: 14, marginBottom: 14 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12, marginBottom: 14 }}>
               {/* Mobile */}
               <div>
                 <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 700, color: 'var(--ink)', marginBottom: 5 }}>
@@ -263,7 +277,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
               </label>
               
               {/* Quick Date Pills */}
-              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 8 }}>
+              <div className="appt-pill-group" style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 8 }}>
                 {[
                   { label: '📅 Today', val: today },
                   { label: '🌅 Tomorrow', val: (() => { const d = new Date(); d.setDate(d.getDate() + 1); return d.toISOString().split('T')[0] })() },
@@ -272,6 +286,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
                   <button
                     key={p.label}
                     type="button"
+                    className="appt-pill-btn"
                     onClick={() => setForm(f => ({ ...f, date: p.val }))}
                     style={{
                       padding: '6px 12px',
@@ -310,7 +325,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
               </label>
 
               {/* Quick Time Slot Pills */}
-              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 8 }}>
+              <div className="appt-pill-group" style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 8 }}>
                 {[
                   { label: '🌅 10:00 AM', val: '10:00' },
                   { label: '☀️ 12:30 PM', val: '12:30' },
@@ -320,6 +335,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
                   <button
                     key={t.label}
                     type="button"
+                    className="appt-pill-btn"
                     onClick={() => setForm(f => ({ ...f, time: t.val }))}
                     style={{
                       padding: '6px 12px',
